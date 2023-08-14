@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    transition: .3s ease;
+}
+
+/* Colors and Styles (Default) */
+:root{
+    --PrimaryColor: hsl(193, 95%, 68%);
+    --HoverColor: #ABE9F9;
+    --paleGreen: hsl(190, 80%, 85%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: hsl(330, 12%, 97%);
+
+    /* Font ang Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+/* Default styles */
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--inputColor);
+    padding: .8rem 1rem;
+    color: var(--textColor);
+
+    :hover {
+        background: var(--paleGreen);
+        color: var(--PrimaryColor);
+    }
+
+    .icon {
+        margin-left: .5rem;
+    }
+}
+
+.btn-primary {
+    background: var(--PrimaryColor);
+    color: var(--whiteColor);
+
+    :hover {
+        background: var(--HoverColor);
+        color: var(--PrimaryColor);
+    }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    width: 95vw;
+    background: var(--whiteColor);
+    overflow: hidden;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    padding: .8rem 1rem;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--blackColor);
+    background-color: var(--whiteColor);
+    background-clip: padding-box;
+    border: 1px solid var(--greyText);
+    border-radius: 8px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+
+    &:focus-visible {
+        border-color: var(--PrimaryColor);
+    }
+}
+
+.signup, .login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh);
+    display: flex;
+    justify-content: center;
+
+    .logoReact {
+        text-align: center;
+        display: block ruby;
+
+        .app-logo {
+            width: 6rem;
+        }
+    }
+
+    h1 {
+        font-size: var(--biggestFontSize);
+        font-weight: 700;
+    }
+
+    .form-signup, .form-login {
+        border-radius: 12px;
+        box-shadow: 0 2px 4px var(--inputColor);
+
+        .message {
+            margin: 15px 0 0;
+            color: var(--textColor);
+            font-size: 16px;
+            text-align: center;
+
+            &> a {
+                color: var(--PrimaryColor);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .app-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/* hide the scroll thumb */
+::-webkit-scrollbar {
+    display: none;
+}
