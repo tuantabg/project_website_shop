@@ -23,7 +23,7 @@ const Signup = () => {
           <div className='form-signup w-full max-w-md p-5 md:p-5 text-center bg-white m-auto'>
               <form action="">
                 <input ref={nameRef} type="text" id='firstName' className='form-control w-full' placeholder="Họ và tên" aria-label='Full Name'/>
-                <input ref={emailRef} type="email" id='emailName' className='form-control w-full' placeholder="Địa chỉ email" aria-label='Email Address'/>
+                <input ref={emailRef} type="email" id='emailName' className='form-control w-full' placeholder="Email" aria-label='Email Address'/>
                 <input ref={passwordRef} type="password" id='password' className='form-control w-full' placeholder="Mật khẩu" aria-label='Password'/>
                 <input ref={passwordConfirmationRef} type="password" id='password' className='form-control w-full' placeholder="Lặp lại mật khẩu" aria-label='Repeat Password'/>
                 <button className="btn btn-primary w-full mb-4">Đăng ký</button>
