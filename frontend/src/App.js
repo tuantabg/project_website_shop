@@ -6,9 +6,9 @@ import Header from './component/layout/header/Header';
 
 function App() {
   return (
-    <div className="container">
+    <div className="w-[calc(100vw)]">
       <Header />
-      <main className='pt-16 md:px-4'>
+      <main className='relative pt-16 md:px-4 bg-slate-100 min-h-[calc(100vh)]'>
           <Outlet />
       </main>
     </div>

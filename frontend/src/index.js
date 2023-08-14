@@ -6,7 +6,7 @@ import './index.css';
 // Import page =========>
 import App from './App';
 import Home from './page/home/Home';
-import Menu from './page/Menu/Menu';
+import Menu from './page/menu/Menu';
 import About from './page/about/About';
 import Contact from './page/contact/Contact';
 import NewProduct from './page/newProduct/NewProduct';

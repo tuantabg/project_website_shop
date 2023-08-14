@@ -6,7 +6,7 @@ import './Header.scss';
 import { BsPersonCircle, BsBasketFill } from "react-icons/bs";
 
 // Import Images =========>
-import LogoReact from '../../../Assest/logo.svg';
+import LogoReact from '../../../assest/logoReact.svg';
 
 export const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
