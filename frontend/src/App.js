@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import './App.css';
 
 // Import Component - Layout =========>
-import Header from './component/Layout/Header/Header';
+import Header from './component/layout/header/Header';
 
 function App() {
   return (
