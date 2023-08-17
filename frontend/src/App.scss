@@ -151,10 +151,11 @@ label {
 
     .logoReact {
         text-align: center;
-        display: block ruby;
+        display: block;
 
         .app-logo {
             width: 6rem;
+            margin: 0 auto;
         }
     }
 
