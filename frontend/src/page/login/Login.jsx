@@ -28,11 +28,7 @@ const Login = () => {
     const {email, password} = data;
 
     if ( email && password) {
-      if (password) {
-        alert("success.");
-      } else {
-        alert("Mật khẩu và xác nhận mật khẩu không giống nhau.");
-      }
+      alert("success.");
     } else {
       alert("Vui lòng nhập các trường bắt buộc.")
     }
@@ -46,7 +42,7 @@ const Login = () => {
           </div>
           <h1 className='text-center p-4'>Đăng Nhập</h1>
 
-          <div className='form-login w-full max-w-md p-5 md:p-5 text-center bg-white m-auto'>
+          <div className='form-login w-full max-w-md p-5 md:p-5 text-center m-auto'>
               <form onSubmit={handleSubmit} action="">
                 <input  type="email" 
                         name='email'
