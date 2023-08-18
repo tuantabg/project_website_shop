@@ -30,10 +30,8 @@
             width: 8rem;
             margin: 0 auto 1.25rem;
             overflow: hidden;
-            border: 4px solid var(--paleGreen);
 
             .uploadAvata {
-                background: var(--paleGreen);
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -45,8 +43,9 @@
                     align-items: center;
                     width: 100%;
                     height: 100%;
-                    font-size: var(--smallFontSize);
+                    font-size: var(--h3FontSize);
                     color: var(--blackColor);
+                    font-weight: 700;
                 }
             }
         }

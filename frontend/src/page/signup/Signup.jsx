@@ -11,11 +11,11 @@ import LogoReact from '../../assest/avatarDefault.jpg';
 const Signup = () => {
 	const navigate = useNavigate();
 	const [data, setData] = useState({
-		image: "",
 		fullName : "",
 		email : "",
 		password : "",
 		passwordConfirmation: "",
+		image: "",
 	})
 
 	const handleOnChange = (e) => {
@@ -42,16 +42,27 @@ const Signup = () => {
 		})
 	}
 
-
-	const handleSubmit = (e) => {
+	const handleSubmit = async(e) => {
 			e.preventDefault();
 
 			const {fullName, email, password, passwordConfirmation} = data;
 
 			if (fullName && email && password && passwordConfirmation) {
 			if (password === passwordConfirmation) {
+
+				const fetchData = await fetch(`${process.env.REACT_APP_SERVER_DOMIN}/signup`, {
+					method 	: "POST",
+					headers : {
+						"content-type" : "application/json"
+					},
+					body 	: JSON.stringify(data)
+				});
+
+				const dataRes = await fetchData.json();
+				console.log(dataRes);
+
 				alert("success.");
-				navigate("/login");
+				// navigate("/login");
 			} else {
 				alert("Mật khẩu và xác nhận mật khẩu không giống nhau.");
 			}
@@ -68,12 +79,12 @@ const Signup = () => {
 					<form onSubmit={handleSubmit} action="">
 						<div className='logoReact md:mb-5'>
 							<img src={data.image ? data.image : LogoReact}
-								className='pointer-events-none'
+								className='pointer-events-none object-cover w-full h-full'
 								alt="Logo React"
 							/>
 							<label htmlFor='profileImage' className='cursor-pointer'>
-								<div className="uploadAvata h-1/3">
-									<span>Tải ảnh lên</span>
+								<div className="uploadAvata h-1/3 bg-sky-500 bg-opacity-40">
+									<span>Đăng ảnh</span>
 								</div>
 								<input type="file"
 									name='image'
